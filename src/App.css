@@ -1,11 +1,8 @@
 .title {
-  /* width: 100%; */
   text-align: center;
   margin-bottom: 20px;
   margin-left: -20px;
   padding-left: 20px;
-  /* margin-left: 5px; */
-  /* padding-left: 80px; */
    /* https://www.npmjs.com/package/pokemon-font */
    -webkit-font-smoothing: none;
    font-family: 'pokemon-font', monospace;
@@ -13,9 +10,7 @@
 
 
 p, h2 {
-  /* width: 10s0%; */
   text-align: center;
-  /* font-size: 3rem; */
   /* color: #2A77AE; */
   color: whitesmoke;
   font-weight: bolder;
@@ -24,16 +19,6 @@ p, h2 {
   /* https://www.npmjs.com/package/pokemon-font */
   -webkit-font-smoothing: none;
   font-family: 'pokemon-font', monospace;
-  /* font-family: 'Flamenco', cursive; */
-  /* margin-left: 60px; */
-  /* font-size: 40px; */
-
-  /* border: 2px solid white; */
-  /* background-color:white; */
 }
 
-/* h2 {
-  
-  margin-left: 80px;
-} */
 
