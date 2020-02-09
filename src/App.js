@@ -1,26 +1,149 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Cited Class Activity: https://harvard.bootcampcontent.com/Harvard-Coding-Boot-Camp/hu-cam-fsf-pt-09-2019-u-c/tree/master/Week_19/01-Activities/29-Stu_FriendRefactor
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from "react";
+import PokemonCard from "./components/PokemonCard";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
+import pokemons from "./pokemons.json";
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from "./components/Container";
+
+
+let score = 0;
+let topScore = 0;
+let message = "Click on a Pokemon for points! Click on the same one twice and you lose!";
+
+class App extends Component {
+  // Setting this.state.pokemons to the pokemons json array
+  state = {
+    pokemons,
+    score: 0,
+    topScore: 0,
+    message
+  };
+
+  pokemonClick = id => {
+
+    // Make a copy of the state pokemons array to work with
+    const pokemons = this.state.pokemons;
+
+    // Filter for the clicked pokemons
+    const pokemonMatch = pokemons.filter(pokemon => pokemon.id === id);
+
+    // If the pokemonMatch image's clicked value is already true, 
+    // do the game over actions
+    if (pokemonMatch[0].clicked) {
+
+
+      score = 0;
+      message = "Ah! Sorry you already clicked that one. Game Over!"
+
+
+      for (let i = 0; i < pokemons.length; i++) {
+        pokemons[i].clicked = false;
+      }
+
+      this.setState({ message });
+      this.setState({ score });
+      this.setState({ pokemons });
+
+      // Otherwise, if clicked = false, and the user hasn't finished
+    } else if (score < 11) {
+
+      // Set its value to true
+      pokemonMatch[0].clicked = true;
+
+      // increment the appropriate counter
+      score++;
+      // this.setState({ score: this.state.score + 1 });
+
+      message = "Great! You haven't click on that one yet! Keep going!";
+
+      if (score > topScore) {
+        topScore = score;
+        this.setState({ topScore });
+      }
+
+      // When a Pokemon Card is clicked, shuffle the Pokemon array in a random order
+      pokemons.sort(function (a, b) { return 0.5 - Math.random() });
+
+      // Set this.state.pokemons equal to the new pokemons array
+      this.setState({ pokemons });
+      this.setState({ score });
+      this.setState({ message });
+    } else {
+
+      // Set its value to true
+      pokemonMatch[0].clicked = true;
+
+      // restart the score counter
+      score = 0;
+
+      // play again
+      message = "Yay!!! You got ALL of them!!! Now, let's see if you can do it again!";
+      topScore = 12;
+      this.setState({ topScore });
+
+      for (let i = 0; i < pokemons.length; i++) {
+        pokemons[i].clicked = false;
+      }
+
+      // When a Pokemon Card is clicked, shuffle the Pokemon array in a random order
+      pokemons.sort(function (a, b) { return 0.5 - Math.random() });
+
+      // Set this.state.pokemons equal to the new pokemons array
+      this.setState({ pokemons });
+      this.setState({ score });
+      this.setState({ message });
+
+    }
+  };
+
+
+  // pokemonClick = () => {
+  //   // We always use the setState method to update a component's state
+  //   this.setState({ score: this.state.score + 1 });
+
+  //   // When a Pokemon Card is clicked, shuffle all the Pokemon cards in a random order
+  //   this.state.pokemons.sort(() => Math.random() - 0.5)
+
+  // };
+
+
+
+  // Map over this.state.pokemons and render a pokemonCard component for each pokemon object
+  render() {
+    return (
+
+      <Wrapper>
+        <Container></Container>
+        <Title>Pokemon - Gotta "Click" Them All   <h2 className="message"> {this.state.message}</h2> <p className="card-text">Your Score: {this.state.score} | Top Score: {this.state.topScore}</p></Title>
+        {/* <h2 className="message"> {this.state.message}</h2> */}
+
+        {this.state.pokemons.map(pokemon => (
+          <PokemonCard
+            pokemonID={this.pokemonID}
+            pokemonClick={this.pokemonClick}
+            id={pokemon.id}
+            key={pokemon.id}
+            image={pokemon.image}
+
+          />
+        ))}
+      </Wrapper>
+    );
+  }
 }
 
+
 export default App;
+
+
+
+
+
+
+
+
+
