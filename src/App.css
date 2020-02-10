@@ -1,6 +1,6 @@
 .title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: -20px;
   padding-left: 20px;
    /* https://www.npmjs.com/package/pokemon-font */
@@ -14,7 +14,7 @@ p, h2 {
   /* color: #2A77AE; */
   color: whitesmoke;
   font-weight: bolder;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   align-items: center;
   /* https://www.npmjs.com/package/pokemon-font */
   -webkit-font-smoothing: none;

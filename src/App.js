@@ -8,6 +8,7 @@ import pokemons from "./pokemons.json";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from "./components/Container";
+import Footer from "./components/Footer";
 
 
 let score = 0;
@@ -118,9 +119,10 @@ class App extends Component {
 
       <Wrapper>
         <Container></Container>
-        <Title>Pokemon - Gotta "Click" Them All   <h2 className="message"> {this.state.message}</h2> <p className="card-text">Your Score: {this.state.score} | Top Score: {this.state.topScore}</p></Title>
-        {/* <h2 className="message"> {this.state.message}</h2> */}
-
+        <Title>Pokemon - Gotta "Click" Them All
+          <h2 className="message"> {this.state.message}</h2>
+          <p className="card-text">Your Score: {this.state.score} | Top Score: {this.state.topScore}</p>
+        </Title>
         {this.state.pokemons.map(pokemon => (
           <PokemonCard
             pokemonID={this.pokemonID}
@@ -131,6 +133,7 @@ class App extends Component {
 
           />
         ))}
+        <Footer></Footer>
       </Wrapper>
     );
   }
