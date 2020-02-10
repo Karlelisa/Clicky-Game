@@ -1,4 +1,4 @@
-# Pokemon Clicky Game App
+# Pokemon Clicky Game : React App
 # Pokemon - Gotta "Click" Them All
 
 ## Description
@@ -19,7 +19,7 @@
 ## My React App Link
 Click on the below link to view my Pokemon Clicky Game App. Once on the app, click on any Pokemon to start playing.
 
-(link coming soon)
+https://karlelisa.github.io/Clicky-Game/
 
 
 ## My Screenshots
