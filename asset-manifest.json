@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Clicky-Game/static/css/main.2132225d.chunk.css",
+    "main.css": "/Clicky-Game/static/css/main.32bd6fef.chunk.css",
     "main.js": "/Clicky-Game/static/js/main.8d0aac69.chunk.js",
     "main.js.map": "/Clicky-Game/static/js/main.8d0aac69.chunk.js.map",
     "runtime-main.js": "/Clicky-Game/static/js/runtime-main.da6617cf.js",
@@ -9,10 +9,10 @@
     "static/js/2.b0867c1f.chunk.js": "/Clicky-Game/static/js/2.b0867c1f.chunk.js",
     "static/js/2.b0867c1f.chunk.js.map": "/Clicky-Game/static/js/2.b0867c1f.chunk.js.map",
     "index.html": "/Clicky-Game/index.html",
-    "precache-manifest.14b533523ad5c609b6fc30555dd916f4.js": "/Clicky-Game/precache-manifest.14b533523ad5c609b6fc30555dd916f4.js",
+    "precache-manifest.ca90073355edc6ffcab3999d3d7bb15e.js": "/Clicky-Game/precache-manifest.ca90073355edc6ffcab3999d3d7bb15e.js",
     "service-worker.js": "/Clicky-Game/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/Clicky-Game/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.2132225d.chunk.css.map": "/Clicky-Game/static/css/main.2132225d.chunk.css.map",
+    "static/css/main.32bd6fef.chunk.css.map": "/Clicky-Game/static/css/main.32bd6fef.chunk.css.map",
     "static/js/2.b0867c1f.chunk.js.LICENSE.txt": "/Clicky-Game/static/js/2.b0867c1f.chunk.js.LICENSE.txt",
     "static/media/style.css": "/Clicky-Game/static/media/green-pokemon-logo.bc8750fd.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.da6617cf.js",
     "static/css/2.47e06e2e.chunk.css",
     "static/js/2.b0867c1f.chunk.js",
-    "static/css/main.2132225d.chunk.css",
+    "static/css/main.32bd6fef.chunk.css",
     "static/js/main.8d0aac69.chunk.js"
   ]
 }
