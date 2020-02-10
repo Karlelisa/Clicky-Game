@@ -38,7 +38,7 @@ class App extends Component {
 
 
       score = 0;
-      message = "Ah! Sorry you already clicked that one. Game Over!"
+      message = "Ah! Sorry you already clicked that one. Game Over! Try again!"
 
 
       for (let i = 0; i < pokemons.length; i++) {
