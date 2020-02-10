@@ -24,11 +24,12 @@ Click on the below link to view my Pokemon Clicky Game App. Once on the app, cli
 
 ## My Screenshots
 
-### My Pokemon Clicky Game App Home Page
+### My Pokemon Clicky Game App Home Page:
 ![My Pokemon Clicky Game App home page screenshot](/public/images/my-homepage-game-screenshot.png)
 
 
-### My Pokemon Clicky Game App Home Page With All The Pokemon
+
+### My Pokemon Clicky Game App Home Page With All The Pokemon:
 ![My Pokemon Clicky Game App home page with all the Pokemkon screenshot](/public/images/my-homepage-with-all-pokemon-screenshot.png)
 
 
